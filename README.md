@@ -14,7 +14,7 @@
 
    - To check the fidelity of your install, open up a terminal on your machine and run the command `node --version` to see what version of nodejs you're running.
    - A version higher than 12 is preferred. You can also run `npm --version` and `npx --version` to see the versions of `npm` and `npx` that you are running respectively.
-   - I am running version `7.20.6` of npx and npm, and version `14.17.5` of nodejs during the time of building these applications.
+   - I am running version `10.8.0` of npx and npm, and version `21.6.2` of nodejs during the time of building these applications.
 
 4. A GitHub account to access and download source code files.
 
