@@ -1,4 +1,4 @@
-# What you need to learn
+# Before Beginning
 
 1. HTML
 2. CSS
@@ -9,7 +9,7 @@
 ## What you need on your machine
 
 1. NodeJs - download and install from `https://nodejs.org`
-2. Code Editor - VSCode, Atom
+2. Code Editor - VSCode, Atom, Sublime Text, Notepad, Notepad++, Webstorm
 3. Npm, Npx - Are installed when you install nodejs
 
    - To check the fidelity of your install, open up a terminal on your machine and run the command `node --version` to see what version of nodejs you're running.
