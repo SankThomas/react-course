@@ -1,0 +1,31 @@
+{
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontSize": 14,
+  "window.zoomLevel": 2,
+  "editor.fontFamily": "Menlo",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "diffEditor.renderSideBySide": false,
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.presets.jsOfficial": true,
+  "explorer.compactFolders": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "mdx": "mdx"
+  },
+  "breadcrumbs.showFunctions": false,
+  "editor.stickyScroll.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "smooth",
+  "liveServer.settings.donotShowInfoMsg": true
+}
