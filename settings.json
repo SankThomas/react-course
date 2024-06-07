@@ -16,8 +16,7 @@
   "vsicons.presets.jsOfficial": true,
   "explorer.compactFolders": false,
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "mdx": "mdx"
+    "javascript": "javascriptreact"
   },
   "breadcrumbs.showFunctions": false,
   "editor.stickyScroll.enabled": false,
