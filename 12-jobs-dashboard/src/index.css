@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #ececec;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.article {
+  background-color: transparent;
+  border: 1px solid #111;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.showing {
+  background-color: #111;
+}
+
+.heading-2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.salary {
+  display: block;
+  margin-top: 1rem;
+  color: #777;
+}
+
+.company-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about {
+  color: #999;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.featured-job {
+  background-color: rgb(18, 18, 156);
+  padding: 0.5rem 2rem;
+  display: inline-block;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* .container {
+    column-span: all;
+  } */
+
+  .job-details {
+    padding: 3rem 1.5rem;
+  }
+}
