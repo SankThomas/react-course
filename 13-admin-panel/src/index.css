@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #aeb1b5;
+}
+
+::-moz-selection {
+  background-color: #aeb1b5;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #f7f6f7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+li,
+button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: #333333;
+}
+
+p {
+  line-height: 1.8;
+  color: #3b3a3b;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+a,
+button,
+input,
+input::placeholder,
+textarea {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.btn {
+  position: relative;
+  z-index: 50;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e3e3e3;
+}
+
+.btn-blue {
+  background-color: #0675c4;
+  color: #ffffff;
+}
+
+.btn-blue:hover {
+  background-color: #0a5992;
+}
+
+.btn-gray {
+  background-color: #f0f0f0;
+  color: #3b3a3b;
+}
+
+.btn-gray:hover {
+  background-color: #c6c6c6;
+}
+
+.btn-active {
+  background-color: #3b3a3b;
+  color: #ffffff;
+}
+
+.btn-active:hover {
+  background-color: #222222;
+}
+
+.dark-blue {
+  background-color: #03385c;
+  padding: 1.5rem;
+}
+
+.dark-blue * {
+  color: #91caf2;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.sidebar {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.sidebar.open {
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+.sidebar-links li {
+  margin-top: 1rem;
+}
+
+.section {
+  background-color: #ffffff;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 1.25rem;
+}
+
+.cards a {
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.cards a article h2 {
+  color: #444444;
+}
+
+.cards a article h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.cards a article h2 span {
+  display: block;
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.price-cards {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 1rem;
+  place-items: start;
+}
+
+.price-cards article {
+  box-shadow: 2px solid #3b3a3b;
+  border-radius: 3px;
+  padding: 1.5rem;
+}
+
+.price-cards h3 {
+  margin-bottom: 1rem;
+}
+
+.price-cards h4 {
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #3b3a3b;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.price-cards h4 span {
+  font-size: 1.25rem;
+}
+
+.price-cards .about {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.price-cards .desc {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+
+.price-cards ul li {
+  font-size: 0.9rem;
+  color: #3b3a3b;
+  opacity: 0.75;
+  border-top: 1px solid #3b3a3b22;
+  padding: 1rem 0.2rem;
+}
+
+.price-cards button {
+  margin-top: 2rem;
+}
+
+.questions {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.questions p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .cards,
+  .questions,
+  .price-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    opacity: 1;
+    z-index: 99;
+    width: 200px;
+  }
+
+  .sidebar.open {
+    position: fixed;
+    z-index: 99;
+    width: 200px;
+  }
+
+  .section {
+    max-width: calc(93vw - 200px);
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+
+  .cards,
+  .questions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    max-width: calc(96vw - 200px);
+  }
+
+  .price-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
