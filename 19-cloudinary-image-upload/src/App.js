@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Image } from "cloudinary-react";
+import axios from "axios";
 
-function App() {
+export default function App() {
+  const [images, setImages] = useState([]);
+  const [imageData, setImageData] = useState(null);
+
+  const uploadImage = () => {
+    const formData = new FormData();
+    formData.append("file", images);
+    formData.append("upload_preset", "isqeway9");
+
+    const postImage = async () => {
+      try {
+        const res = await axios.post(
+          // Substitute "${process.env.CLOUDINARY_CLOUDNAME}" with your Cloudinary Cloud Name
+          `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUDNAME}/image/upload`,
+          formData
+        );
+        setImageData(res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    postImage();
+  };
+
+  // You can remove the console.log
+  console.log(imageData);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className="container">
+        <h1>Image Upload App Using Cloudinary</h1>
+
+        <div>
+          <input
+            type="file"
+            name="file"
+            id="file"
+            onChange={(e) => setImages(e.target.files[0])}
+          />
+          <button type="submit" onClick={uploadImage}>
+            Upload Image
+          </button>
+        </div>
+
+        <div>
+          <Image
+            // Substitute "${process.env.CLOUDINARY_CLOUDNAME}" with your Cloudinary Cloud Name
+            cloudName={`${process.env.CLOUDINARY_CLOUDNAME}`}
+            publicId={`https://res.cloudinary.com/dbwj8dzpm/image/upload/v1722077765/${imageData.public_id}`}
+          />
+        </div>
+      </section>
+    </>
   );
 }
-
-export default App;
