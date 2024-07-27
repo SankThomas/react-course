@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import useFetch from "./hooks/useFetch";
+import React from "react";
 
-function App() {
+export default function App() {
+  const issues = useFetch();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>GitHub Issues Apps</h1>
+
+      <div className="cards">
+        {issues.map((issue) => (
+          <article key={issue.id}>
+            <h2>{issue.title}</h2>
+            <>
+              {issue.labels.map((label) => (
+                <a
+                  href={label.url}
+                  style={{
+                    backgroundColor: `#${label.color}30`,
+                    color: `#${label.color}`,
+                    paddingTop: 5,
+                    paddingBottom: 5,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                    marginRight: 10,
+                    fontSize: 14,
+                    borderRadius: 16,
+                    textDecoration: "none",
+                  }}
+                >
+                  {label.name}
+                </a>
+              ))}
+            </>
+
+            <p style={{ marginTop: 24 }}>{issue.body}</p>
+
+            <div>
+              <img src={issue.user.avatar_url} alt={issue.user.login} />
+
+              <ul>
+                <li>{issue.user.login}</li>
+                <li>
+                  <a href={issue.user.html_url}>GitHub Profile</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   );
 }
-
-export default App;
