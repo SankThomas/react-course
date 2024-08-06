@@ -97,7 +97,6 @@ By the end of each of the projects you should be able to do each of the items li
 16. Book Finder
     - Get and display a list of books from the NYTimes API.
     - Filter books by search.
-    - Click on a book to get more information about it.
 17. Blog with Sanity CMS
     - Set up a Sanity app in a React app.
     - Connect to the sanity CMS.
@@ -111,6 +110,4 @@ By the end of each of the projects you should be able to do each of the items li
     - Connect to the cloudinary cdn.
     - Upload images to cloudinary.
     - Display the uploaded image.
-    - Create a popup to share the image.
-    - Download the image
 20. ReactJs + MongoDB
