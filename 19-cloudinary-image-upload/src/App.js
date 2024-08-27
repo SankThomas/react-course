@@ -47,13 +47,17 @@ export default function App() {
           </button>
         </div>
 
-        <div>
-          <Image
-            // Substitute "${process.env.CLOUDINARY_CLOUDNAME}" with your Cloudinary Cloud Name
-            cloudName={`${process.env.CLOUDINARY_CLOUDNAME}`}
-            publicId={`https://res.cloudinary.com/dbwj8dzpm/image/upload/v1722077765/${imageData.public_id}`}
-          />
-        </div>
+        {imageData ? (
+          <div>
+            <Image
+              // Substitute "${process.env.CLOUDINARY_CLOUDNAME}" with your Cloudinary Cloud Name
+              cloudName={`${process.env.CLOUDINARY_CLOUDNAME}`}
+              publicId={imageData.public_id}
+            />
+          </div>
+        ) : (
+          <p>Upload your image to view it here</p>
+        )}
       </section>
     </>
   );
